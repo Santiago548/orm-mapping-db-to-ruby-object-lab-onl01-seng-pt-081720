@@ -42,7 +42,7 @@ class Student
         WHERE name = ?
       SQL
 
-      DB[:conn].execute(sql, name)
+      DB[:conn].execute(sql, self.name)
     end
 
     def self.all_students_in_grade_9
