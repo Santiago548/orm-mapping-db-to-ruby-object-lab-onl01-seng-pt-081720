@@ -61,7 +61,7 @@ class Student
       SQL
 
       DB[:conn].execute(sql, self.name, self.grade).each do |row|
-        row
+        self.new_from_db(row)
       end
     end
 end
