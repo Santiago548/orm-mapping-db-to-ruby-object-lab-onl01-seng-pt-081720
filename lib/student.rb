@@ -57,5 +57,6 @@ class Student
 
       DB[:conn].execute(sql, self.name, self.grade).each do |row|
         row
+      end
     end
 end
