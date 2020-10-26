@@ -55,6 +55,7 @@ class Student
         WHERE grade < 12
       SQL
 
-      DB[:conn].execute(sql, self.name, self.grade)
+      DB[:conn].execute(sql, self.name, self.grade).each do |row|
+        row
     end
 end
