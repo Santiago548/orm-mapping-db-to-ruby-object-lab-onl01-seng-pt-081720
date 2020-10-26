@@ -40,10 +40,11 @@ class Student
       sql = <<-SQL
         SELECT * FROM students
         WHERE name = ?
+        LIMIT 1
       SQL
 
       DB[:conn].execute(sql, self.name)
-    end
+    end.first
 
     def self.all_students_in_grade_9
       sql = <<-SQL
